@@ -1,0 +1,7 @@
+== cesta_tam_a_zase_zpatky
+
+Rgl needed for this project to work 
+http://rgl.rubyforge.org/rgl/index.html
+can be instaled by:
+gem install rgl
+
