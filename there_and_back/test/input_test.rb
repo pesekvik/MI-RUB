@@ -4,7 +4,7 @@
 $:.unshift File.join(File.dirname(__FILE__),'..','lib')
 
 require 'test/unit'
-require 'lib/there_and_back/runner'
+require 'there_and_back/runner'
 
 class Input_test < Test::Unit::TestCase
 	def setup		

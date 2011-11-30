@@ -6,6 +6,7 @@
             <name>there_and_back</name>
             <source-roots>
                 <root id="src.dir"/>
+                <root id="src.bin.dir"/>
                 <root id="src.rgl-0.4.0.dir"/>
             </source-roots>
             <test-roots>
