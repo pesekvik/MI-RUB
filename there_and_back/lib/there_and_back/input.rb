@@ -1,6 +1,7 @@
 require_relative 'city_graph'
 
 module ThereAndBack
+	#Takes care of input
 	class Input
 		INPUT_FILE_MISSING = 'Chybi vstupni soubor'
 		INPUT_FILE_CANT_FIND = 'Nenalezen vstupni soubor "%s"'
@@ -11,6 +12,9 @@ module ThereAndBack
 		def initialize(arguments)
 			@arguments = arguments
 		end
+		#parses arguments and returns an array of CityGraph instances
+		#parsed from the input. Raises Argument error if input file is wrong,
+		#or its contents are wrong
 		def parse
 			raise ArgumentError, INPUT_FILE_MISSING if(!@arguments[0])
 			raise ArgumentError, INPUT_FILE_CANT_FIND % @arguments[0] if !File.exists?(@arguments[0])
@@ -22,6 +26,7 @@ module ThereAndBack
 			return graphs
 		end
 		private
+		#parses one line into CityGraph
 		def parse_graph(line)
 			city_graph = CityGraph.new
 			begin

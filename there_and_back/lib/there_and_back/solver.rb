@@ -6,11 +6,13 @@ require 'rgl/topsort'
 require 'rgl/connected_components'
 
 module ThereAndBack
+	#Class solving the requested problem
   class Solver		
     def initialize()
 			@found_solutions = []
       @logger = Logger.new(STDOUT)
     end
+		#solves an array of graphs and returns sollutions for all
 		def solve(graphs)
 			all_solutions = []
 			graphs.each { 
@@ -19,6 +21,13 @@ module ThereAndBack
 			}
 			return all_solutions
 		end
+		#solves one graph instance, solving by brute force
+		#1) get set of all directed edges if graph was full
+		#2) remove those edges which are already in assigment graph
+		#3) from 1 until graph node size + 1 it tries combinations from edge set
+		#and adds them to assigment graph and then checks, whether the 
+		#resulting graph is cyclic
+		#returns all best sollutions in array
 		def solve_one(graph)
 			if test_cyclic(graph)
 				return Array.new
@@ -58,9 +67,11 @@ module ThereAndBack
 			raise RuntimeError, 'Wrong implementation'
 		end
 		private
+		#test, whether the graph is cyclic
 		def test_cyclic(graph)
 			graph.strongly_connected_components.num_comp	== 1
 		end
+		#returns a complete instance of city graph with n nodes
 		def complete_directed (n)
 			i1 = (1..n).to_a
 			g = CityGraph.new			

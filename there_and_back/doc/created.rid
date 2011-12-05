@@ -1,0 +1,14 @@
+Mon, 05 Dec 2011 16:48:32 +0100
+./bin/there_and_back.rb	Tue, 29 Nov 2011 02:11:48 +0100
+./lib/there_and_back/runner.rb	Mon, 05 Dec 2011 16:46:34 +0100
+./lib/there_and_back/city_graph.rb	Mon, 05 Dec 2011 16:46:53 +0100
+./LICENSE	Mon, 28 Nov 2011 19:59:09 +0100
+./nbproject/private/rake-d.txt	Mon, 05 Dec 2011 15:41:22 +0100
+./lib/there_and_back/input.rb	Mon, 05 Dec 2011 16:46:48 +0100
+./lib/input.txt	Tue, 29 Nov 2011 02:43:19 +0100
+./test/input_test.rb	Wed, 30 Nov 2011 23:38:45 +0100
+./lib/there_and_back/response.rb	Mon, 05 Dec 2011 16:47:00 +0100
+./lib/there_and_back/solver.rb	Mon, 05 Dec 2011 16:48:30 +0100
+./test/test_instances.rb	Wed, 30 Nov 2011 23:38:49 +0100
+./README	Mon, 28 Nov 2011 21:19:56 +0100
+./Rakefile	Wed, 30 Nov 2011 23:39:47 +0100

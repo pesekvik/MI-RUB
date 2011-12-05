@@ -5,19 +5,21 @@ module Coverage
 		def run
 			input = Input.new()
 			tests = input.get_tests_from_input()
+			result = ""
 			tests.each { |t|
-				puts
 				output_lines = t.solve
 				if output_lines.empty?
-					puts "0"
+					result+= "0"
 				else
-					puts output_lines.count
+					result+= "#{output_lines.count}\n"
 					output_lines.each { 
 						|i|
-						puts "#{i.left_coord} #{i.right_coord}"
+						result+= "#{i.left_coord} #{i.right_coord}"
 					}	
 				end
+				result +="\n"
 			}
+			result
 		end
 	end
 end

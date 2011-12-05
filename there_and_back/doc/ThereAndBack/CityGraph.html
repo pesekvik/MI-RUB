@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Class: ThereAndBack::CityGraph</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/there_and_back/city_graph.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">RGL::DirectedAdjacencyGraph
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-print_to_file">#print_to_file</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../lib/input_txt.html">input</a>
+  
+    <li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../ThereAndBack.html">ThereAndBack</a>
+  
+    <li><a href="../ThereAndBack/CityGraph.html">ThereAndBack::CityGraph</a>
+  
+    <li><a href="../ThereAndBack/Input.html">ThereAndBack::Input</a>
+  
+    <li><a href="../ThereAndBack/Response.html">ThereAndBack::Response</a>
+  
+    <li><a href="../ThereAndBack/ResponseSolution.html">ThereAndBack::ResponseSolution</a>
+  
+    <li><a href="../ThereAndBack/Runner.html">ThereAndBack::Runner</a>
+  
+    <li><a href="../ThereAndBack/Solver.html">ThereAndBack::Solver</a>
+  
+    <li><a href="../Example_1.html">Example_1</a>
+  
+    <li><a href="../Input_test.html">Input_test</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ThereAndBack::CityGraph</h1>
+
+  <div id="description" class="description">
+    
+<p>Encapsulates RGL::DirectedAdjacencyGraph if further additions would be
+needed</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(edgelist_class = Set, *other_graphs)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/there_and_back/city_graph.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">edgelist_class</span> = <span class="ruby-constant">Set</span>, *<span class="ruby-identifier">other_graphs</span>)
+        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">edgelist_class</span>, *<span class="ruby-identifier">other_graphs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-print_to_file" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">print_to_file</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>prints graph to human readable file</p>
+          
+
+          
+          <div class="method-source-code" id="print_to_file-source">
+            <pre><span class="ruby-comment"># File lib/there_and_back/city_graph.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">print_to_file</span>
+        <span class="ruby-identifier">require</span> <span class="ruby-string">'rgl/dot'</span>
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">write_to_graphic_file</span>(<span class="ruby-string">&quot;jpg&quot;</span>) 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- print_to_file-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- print_to_file-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,14 +1,16 @@
-# To change this template, choose Tools | Templates
-# and open the template in the editor.
 
 module ThereAndBack
+	#Encapsulates result into class for different purposes of result showing
 	class Response
 		def initialize
 			@responses = []
 		end
+		#adds sollutions for input graph
 		def add_response(graph_original, sollutions)
 			@responses << ResponseSolution.new(graph_original, sollutions)		
 		end
+		
+		#returns sollution as a string required in assigment
 		def to_s	
 			to_return = ''
 			@responses.each { 
@@ -17,12 +19,14 @@ module ThereAndBack
 			}
 			to_return 
 		end
+		#resturns results as an array
 		def edge_array
 			 to_return = @responses.collect { |item| item.sollutions }
 			 return to_return
 		end
 	end
 	private
+	#One sollution in response
 	class ResponseSolution
 		NEEDED_TO_CONSTRUCT = 'Je třeba ještě vybudovat %s'
 		ALREADY_COMPLETED = 'Síť je vyhovující'

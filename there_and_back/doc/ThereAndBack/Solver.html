@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Class: ThereAndBack::Solver</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/there_and_back/solver.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-solve">#solve</a>
+    
+    <li><a href="#method-i-solve_one">#solve_one</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../lib/input_txt.html">input</a>
+  
+    <li class="file"><a href="../nbproject/private/rake-d_txt.html">rake-d</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../ThereAndBack.html">ThereAndBack</a>
+  
+    <li><a href="../ThereAndBack/CityGraph.html">ThereAndBack::CityGraph</a>
+  
+    <li><a href="../ThereAndBack/Input.html">ThereAndBack::Input</a>
+  
+    <li><a href="../ThereAndBack/Response.html">ThereAndBack::Response</a>
+  
+    <li><a href="../ThereAndBack/ResponseSolution.html">ThereAndBack::ResponseSolution</a>
+  
+    <li><a href="../ThereAndBack/Runner.html">ThereAndBack::Runner</a>
+  
+    <li><a href="../ThereAndBack/Solver.html">ThereAndBack::Solver</a>
+  
+    <li><a href="../Example_1.html">Example_1</a>
+  
+    <li><a href="../Input_test.html">Input_test</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ThereAndBack::Solver</h1>
+
+  <div id="description" class="description">
+    
+<p>Class solving the requested problem</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/there_and_back/solver.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>()
+                    <span class="ruby-ivar">@found_solutions</span> = []
+  <span class="ruby-ivar">@logger</span> = <span class="ruby-constant">Logger</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">STDOUT</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-solve" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">solve</span><span
+            class="method-args">(graphs)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>solves an array of graphs and returns sollutions for all</p>
+          
+
+          
+          <div class="method-source-code" id="solve-source">
+            <pre><span class="ruby-comment"># File lib/there_and_back/solver.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">solve</span>(<span class="ruby-identifier">graphs</span>)
+        <span class="ruby-identifier">all_solutions</span> = []
+        <span class="ruby-identifier">graphs</span>.<span class="ruby-identifier">each</span> { 
+                <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">all_solutions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">solve_one</span>(<span class="ruby-identifier">g</span>)
+        }
+        <span class="ruby-keyword">return</span> <span class="ruby-identifier">all_solutions</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- solve-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- solve-method -->
+
+    
+      <div id="method-i-solve_one" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">solve_one</span><span
+            class="method-args">(graph)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>solves one graph instance, solving by brute force 1) get set of all
+directed edges if graph was full 2) remove those edges which are already in
+assigment graph 3) from 1 until graph node size + 1 it tries combinations
+from edge set and adds them to assigment graph and then checks, whether the
+resulting graph is cyclic returns all best sollutions in array</p>
+          
+
+          
+          <div class="method-source-code" id="solve_one-source">
+            <pre><span class="ruby-comment"># File lib/there_and_back/solver.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">solve_one</span>(<span class="ruby-identifier">graph</span>)
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">test_cyclic</span>(<span class="ruby-identifier">graph</span>)
+                <span class="ruby-keyword">return</span> <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-comment">#first whole set we think of the whole set of edges to try</span>
+        <span class="ruby-identifier">edges_to_test</span> = <span class="ruby-identifier">complete_directed</span>(<span class="ruby-identifier">graph</span>.<span class="ruby-identifier">vertices</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">edges</span>
+        
+        <span class="ruby-comment">#we don`t need edges already in</span>
+        <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">edges</span>().<span class="ruby-identifier">each</span>{ 
+                <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+                <span class="ruby-identifier">edges_to_test</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">i</span>)     
+        }
+        
+        <span class="ruby-comment"># even in empty graph, we are able to make circle like this</span>
+        <span class="ruby-identifier">try_times</span> = <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">vertices</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> 
+        <span class="ruby-identifier">try_times</span>.<span class="ruby-identifier">times</span> { 
+                <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>  
+                <span class="ruby-identifier">number_trying</span> = <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+                <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;Trying to add #{number_trying} edges&quot;</span>
+                <span class="ruby-identifier">edges_to_test</span>.<span class="ruby-identifier">combination</span>(<span class="ruby-identifier">number_trying</span>) {                          
+                        <span class="ruby-operator">|</span><span class="ruby-identifier">to_add</span><span class="ruby-operator">|</span>           
+                        <span class="ruby-comment">#we`re ready to finish, we have results all results on the correct level</span>
+                        <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">add_edges</span>(*<span class="ruby-identifier">to_add</span>)           
+                        <span class="ruby-keyword">if</span> <span class="ruby-identifier">test_cyclic</span>(<span class="ruby-identifier">graph</span>)
+                                <span class="ruby-ivar">@found_solutions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">to_add</span>
+                                <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;Found #{@found_solutions.size} solutions while adding #{number_trying} edges&quot;</span>
+                        <span class="ruby-keyword">end</span>                                
+                        <span class="ruby-identifier">to_add</span>.<span class="ruby-identifier">each</span>{
+                                <span class="ruby-operator">|</span><span class="ruby-identifier">edge</span><span class="ruby-operator">|</span>            
+                                <span class="ruby-identifier">graph</span>.<span class="ruby-identifier">remove_edge</span>(<span class="ruby-identifier">edge</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">edge</span>[<span class="ruby-value">1</span>])
+                        }                                  
+                }   
+                <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@found_solutions</span>.<span class="ruby-identifier">empty?</span>         
+                        <span class="ruby-keyword">return</span> <span class="ruby-ivar">@found_solutions</span>                    
+                <span class="ruby-keyword">end</span>
+        }
+        <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-string">'Wrong implementation'</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- solve_one-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- solve_one-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

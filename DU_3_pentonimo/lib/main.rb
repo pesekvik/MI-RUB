@@ -1,7 +1,7 @@
 
 
 class Solver
-	
+	#dimenze sachovnice, dimenze obdelniku vkladaneho
 	def initialize(board_dim_x, board_dim_y,piece_dim_x , piece_dim_y)
 		@board_dim_x = board_dim_x;
 		@board_dim_y = board_dim_y;
@@ -23,21 +23,22 @@ class Solver
 		}
 		return piece
 	end
-	def solve
+	def solve()		
+		result_string = ""
 		if solve_internal(@board, 0, 0)
-			puts "Succesfully filled"
+			result_string += "Succesfully filled\r\n" 
 			@tried.each { |object|  
-				print "item: "
+				result_string += "item: "
 				object.each{
 					|item|
-					print "[#{item/@board_dim_x},#{item%@board_dim_x}] "
+					result_string += "[#{item/@board_dim_x},#{item%@board_dim_x}] "
 				}
-				puts
+				result_string += "\r\n"
 			}
 		else
-			puts "No solution found"
+			result_string += "No solution found"
 		end
-		
+		return result_string		
 	end
 	private
 	def solve_internal(board, translateX, translateY)
@@ -97,8 +98,8 @@ class Solver
 	end
 end
 
-solver = Solver.new(8, 3, 1, 3)
-solver.solve
+#solver = Solver.new(8, 3, 1, 3)
+#solver.solve
 
 
 
